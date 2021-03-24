@@ -1,5 +1,5 @@
 // Symmetry corresponding to the number of reflections. Change the number for different number of reflections 
-let symmetry = 6;   
+let symmetry = sym;   
 
 let angle = 360 / symmetry;
 let saveButton, clearButton, mouseButton, keyboardButton;
@@ -13,7 +13,7 @@ function setup() {
   background(127);
 slider1 = createSlider(0, 20, 100);
 
-  slider1.position(260, 20);
+  slider1.position(300, 20);
 
   slider1.style('width', '80px');
   // Creating the save button for the file
@@ -56,6 +56,7 @@ function screenFull() {
 }
 
 function draw() {
+  let sym = slider1.value();
   translate(width / 2, height / 2);
   if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
     let mx = mouseX - width / 2;
