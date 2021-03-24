@@ -13,7 +13,7 @@ function setup() {
   background(127);
 slider1 = createSlider(0, 20, 100);
 
-  slider1.position(200, 20);
+  slider1.position(260, 20);
 
   slider1.style('width', '80px');
   // Creating the save button for the file
