@@ -65,8 +65,8 @@ function draw() {
     let pmy = pmouseY - height / 2;
     
     if (mouseIsPressed) {
-      for (let i = 0; i < symmetry; i++) {
-        rotate(angle);
+      for (let i = 0; i < sym; i++) {
+        rotate(360/sym);
         let sw = sizeSlider.value();
         strokeWeight(sw);
         stroke(colorPicker.color());
