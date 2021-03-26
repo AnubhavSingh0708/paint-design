@@ -134,7 +134,7 @@ let sym = slider1.value();
         scale(1, -1);
 
         line(mx, my, pmx, pmy);
-
+// creating line isolated in push and pop such that the previous stroke is saved before the later
         pop();
 
       }
