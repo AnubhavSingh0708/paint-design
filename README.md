@@ -77,3 +77,21 @@ function screenFull() {
   fullscreen(!fs);
 }
 ```
+creating brush size slider and colour picker 
+```
+sizeSlider.position(160,20);
+
+  colorPicker = createColorPicker('#000000');
+
+  colorPicker.position(0,40);
+
+  colorPicker.size(100, 50);
+  ```
+  #### making canvas responsive 
+  ```
+  function windowResized() {
+
+  resizeCanvas(windowWidth, windowHeight);
+
+}
+```
