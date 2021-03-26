@@ -48,4 +48,32 @@ creating save button
  saveButton.mousePressed(saveFile);
 saveButton.position(0,10);
 ```
-and save function `function saveFile() { save('design.png');}`
+and save function 
+```
+function saveFile() { save('design.png');}
+```
+creating clear button
+```
+ clearButton = createButton('clear');
+  clearButton.mousePressed(clearScreen);
+clearButton.position(40,10);
+```
+and clear function
+```
+function clearScreen() {
+  background(127);
+}
+```
+creating fullscreen
+```
+fullscreenButton = createButton('Full Screen');
+fullscreenButton.mousePressed(screenFull);
+fullscreenButton.position(80,10);
+```
+fullscreen function
+```
+function screenFull() {
+  let fs = fullscreen();
+  fullscreen(!fs);
+}
+```
