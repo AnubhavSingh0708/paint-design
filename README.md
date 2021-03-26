@@ -95,3 +95,51 @@ sizeSlider.position(160,20);
 
 }
 ```
+#### making the painting 
+to make the drawing we have to put it in draw function which is executed repeatedly 
+```
+let sym = slider1.value();
+\\getting the symmetry of mirror effect
+
+  translate(width / 2, height / 2);
+
+  if (mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height) {
+
+    let mx = mouseX - width / 2;
+
+    let my = mouseY - height / 2;
+
+    let pmx = pmouseX - width / 2;
+
+    let pmy = pmouseY - height / 2;
+
+    // getting required mouse properties
+
+    if (mouseIsPressed) {
+// on mouse pressed creating drawing
+      for (let i = 0; i < sym; i++) {
+// javascript for loop
+        rotate(360/sym);
+// rotation of drawing
+        let sw = sizeSlider.value();
+// getting strokr width
+        strokeWeight(sw);
+
+        stroke(colorPicker.color());
+// creating colour of the stroke
+        line(mx, my, pmx, pmy);
+// creating line on mouseX and mouseY
+        push();
+
+        scale(1, -1);
+
+        line(mx, my, pmx, pmy);
+
+        pop();
+
+      }
+
+    }
+
+  }
+  ```
